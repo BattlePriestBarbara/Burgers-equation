@@ -1,0 +1,20 @@
+parameter,value
+equation,u_t + u u_x = nu*u_xx, x in [0,1), periodic BC
+scenario,medium viscosity nu = 0.01, N = 64
+nu,0.01
+T_max,1.0
+N_FDM,64
+N_REF,2048
+N_SAMPLES,1000
+N_TRAIN,800
+N_TEST,200
+seed,42
+fdm_flux,Lax-Friedrichs (local)
+fdm_limiter,van Leer TVD
+fdm_time_scheme,explicit RK4, CFL-constrained
+cfl_diff,0.25
+cfl_adv,0.8
+fdm_dt,6.09756098e-03
+fdm_n_steps,164
+reference_solver,Fourier pseudo-spectral + IF-RK4, N=2048
+fno_note,FNO (L=4, k_max=16, d_v=64, GELU, Adam) is the Chapter-3 surrogate; add its test errors to 4.1_error_metrics.csv for the final comparison

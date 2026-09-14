@@ -1,0 +1,15 @@
+parameter,value
+equation,u_t + u u_x = nu*u_xx, x in [0,1), periodic BC
+viscosities,0.1, 0.01, 0.001
+N_GRID,64
+N_REF,2048
+N_TRAIN,800
+N_TEST,200
+seed,42
+fno_arch,L=4, k_max=16, d_v=64, GELU
+training,Adam lr=0.001, cosine, 200 epochs, batch 32
+fno_nu0p01,reused from Section 4.2 (4.2_fno_weights.pt)
+fdm,Lax-Friedrichs + TVD (van Leer), N=64, RK4
+fdm_nu0p01,reused from Section 4.1.3 (4.1_fdm_solutions_final.csv)
+reference,Fourier pseudo-spectral + IF-RK4, N=2048, validated vs Cole-Hopf
+bootstrap,1000 resamples, 95% CI

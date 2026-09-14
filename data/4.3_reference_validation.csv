@@ -1,0 +1,3 @@
+sample,nu,dt,rel_l2_vs_cole_hopf,rel_l2_dt_vs_dt2
+0,0.1,1.0e-03,7.580e-09,9.336e-12
+0,0.001,5.0e-04,5.320e-06,1.018e-09

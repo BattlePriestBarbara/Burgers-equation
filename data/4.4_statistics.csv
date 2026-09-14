@@ -1,0 +1,8 @@
+test,detail,statistic,p_value
+wilcoxon,8_vs_12,8.76869164e-04,0.00000000e+00
+wilcoxon,12_vs_16,7.26297750e-04,0.00000000e+00
+wilcoxon,16_vs_20,1.01944242e-04,7.35993322e-03
+wilcoxon,20_vs_24,5.74219373e-04,0.00000000e+00
+wilcoxon,24_vs_32,8.10214287e-05,1.89874549e-02
+jarque_bera,kmax_8,1.854719e+02,5.312418e-41
+jarque_bera,kmax_32,3.928690e+02,4.893162e-86
